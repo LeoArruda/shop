@@ -45,6 +45,7 @@
     {% include 'navbar.html' %}
     <!-- Content Section-->
     {% block content %}
+    
     {% endblock%}
     <!-- Footer-->
     {% include 'footer.html' %}
@@ -60,6 +61,8 @@
     <script src="{% static 'vendor/masonry-layout/masonry.pkgd.min.js' %}"></script>
     <script src="{% static 'vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
     <!-- masonry -->
+    {% block masonry%}
+    {% endblock %}
     <script>
       $(function(){
           var $grid = $('.masonry-wrapper').masonry({

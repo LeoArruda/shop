@@ -125,7 +125,7 @@
           <div class="col-lg-6">
             <p>Always Fresh                  </p>
             <h2 class="h1 text-uppercase no-margin">Yummy</h2>
-            <p>Delicious</p><a href="#" class="btn btn-template wide shop-now">Shop Now<i class="icon-bag"></i></a>
+            <p>Delicious</p><a href="{% url 'catalog' %}" class="btn btn-template wide shop-now">Shop Now<i class="icon-bag"></i></a>
           </div>
         </div>
       </div>
@@ -228,4 +228,21 @@
       </div>
     </div>
     <div id="scrollTop"><i class="fa fa-long-arrow-up"></i></div>
+    {% endblock %}
+
+    {% block masonry%}
+    <script>
+      $(function(){
+          var $grid = $('.masonry-wrapper').masonry({
+              itemSelector: '.item',
+              columnWidth: '.item',
+              percentPosition: true,
+              transitionDuration: 0,
+          });
+      
+          $grid.imagesLoaded().progress( function() {
+              $grid.masonry();
+          });
+      })
+    </script>
     {% endblock %}
