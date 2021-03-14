@@ -19,6 +19,9 @@ def aboutPage(request):
 def detailPage(request):
     return render(request, 'detail.html')
 
+def contactPage(request):
+    return render(request, 'contact.html')
+
 def catalogPage(request, category_slug=None):
     category_page = None
     products_list = None
